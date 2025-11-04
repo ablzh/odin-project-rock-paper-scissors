@@ -31,17 +31,9 @@ function userMove() {
 
 // create a function for the computer's turn
 function computerMove() {
-  // create a temporary variable for a random number between 0 and 1
-  let randomNumber = Math.random();
-  let computerFigure = "";
-  // use conditional to decide the computer's choice
-  // if random number < 1/3 → rock
-  if (randomNumber < 1 / 3) computerFigure = "rock";
-  // if random number < 2/3 → paper
-  else if (randomNumber < 2 / 3) computerFigure = "paper";
-  // otherwise → scissors
-  else computerFigure = "scissors";
-  // return the computer's choice
+  const figures = ["rock", "paper", "scissors"];
+  const randomIndex = Math.floor(Math.random() * figures.length);
+  const computerFigure = figures[randomIndex];
   return computerFigure;
 }
 
