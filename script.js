@@ -40,7 +40,15 @@ function computerMove() {
 // create a function getWinner
 // compare the return values from the user turn and the computer turn functions
 // (the results will be passed as arguments)
-// return the winner: "user", "computer", or "draw"}
+function getWinner(userFigure, computerFigure) {
+  let winner = "";
+  const beats = { rock: "scissors", scissors: "paper", paper: "rock" };
+  if (userFigure === computerFigure) winner = "draw";
+  else if (beats[userFigure] === computerFigure) winner = "user";
+  else winner = "computer";
+  // return the winner: "user", "computer", or "draw"}
+  return winner;
+}
 
 // Game loop
 
